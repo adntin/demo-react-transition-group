@@ -22,7 +22,8 @@ function Home() {
   const location = useLocation();
   // console.log("Home", location);
   return (
-    <TransitionView>
+    // <TransitionView>
+    <>
       {/* 注意: "TransitionView"的子节点"Routes"必须加"location"属性, 因为需要保留两个页面元素 */}
       <Routes location={location}>
         <Route element={<LayoutTabBar />}>
@@ -32,7 +33,8 @@ function Home() {
         <Route path="Rooms/*" element={<Rooms />} />
         <Route path="*" element={<NoFound />} />
       </Routes>
-    </TransitionView>
+    </>
+    // </TransitionView>
   );
 }
 
